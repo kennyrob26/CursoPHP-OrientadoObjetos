@@ -4,7 +4,8 @@ class Caneta {
     private $ponta;
     private $tampada;
 
-    public function __construct($m, $p){
+    //public function __construct($m, $p){      -> o construtor pode ser utilizado assim, ou com o nome da classe
+    public function Caneta($m, $p){
         $this->modelo = $m;
         $this->ponta = $p;
         $this->tampar();
