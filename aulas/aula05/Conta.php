@@ -5,8 +5,15 @@ Class Conta{
     private $cliente;
     private $saldo;
     private $status;
+    private $senha;
 
-    public function Conta($cliente, $tipo){
+    public function __construct()
+    {
+        $this->saldo = 0;
+        $this->status = false;
+    }
+
+    public function abrirConta($cliente, $tipo){
         $this->cliente = $cliente;
         $this->tipo = $tipo;
         if($tipo == "cc"){
@@ -15,10 +22,9 @@ Class Conta{
             $this->saldo = 150;
         }
         $this->status = true;
-        
-        
-
-    }
+      
+     }
+     
     //Métodos
     public function sacar($valor){
         if($valor <= $this->saldo && $this->status == true){

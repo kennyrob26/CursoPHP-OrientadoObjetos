@@ -10,12 +10,14 @@
     <pre>
         <?php
         require_once "Conta.php";
-        $cliente1 =  new Conta("José", "cc");
+        $cliente1 =  new Conta();
+        $cliente1->abrirConta("José", "cc");
         $cliente1->pagarMensalidade();
         print_r($cliente1);
 
 
-        $cliente2 = new Conta("Ana", "cp");
+        $cliente2 = new Conta();
+        $cliente2->abrirConta("Ana", "cp");
         $cliente2->sacar(150);
         //$cliente2->excluirConta();
         $cliente2->depositar(200);
